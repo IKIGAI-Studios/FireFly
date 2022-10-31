@@ -2,7 +2,7 @@ let sequelize = require('sequelize');
 
 module.exports = (conexion) => {
     var userSchema = conexion.define('user', {
-        id: {
+        id_usr: {
             type: sequelize.INTEGER, 
             primaryKey: true,
             autoIncrement: true
@@ -20,6 +20,12 @@ module.exports = (conexion) => {
             type: sequelize.STRING
         },
         photo: {
+            type: sequelize.STRING
+        },
+        active: {
+            type: sequelize.BOOLEAN
+        },
+        type: {
             type: sequelize.STRING
         }
     });

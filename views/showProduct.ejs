@@ -1,0 +1,46 @@
+<%- include('templates/header')%>
+    <div class="container mt-3 mb-3">
+        <div class="card">
+            <div class="card-header">
+                <h1>Productos</h1>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead class="table-success">
+                        <th>ID:</th>
+                        <th>User:</th>
+                        <th>Name:</th>
+                        <th>Description:</th>
+                        <th>Price:</th>
+                        <th>Category:</th>
+                        <th>Photo:</th>
+                        <th>Editar</th>
+                        <th>Borrado Lógico</th>
+                        <th>Borrado Físico</th>
+                    </thead>
+                    <tbody class="text-center justify-content-center">
+                        <% 
+                            products.forEach((product) => {
+                        %>
+                            <tr>
+                                <td><%= product.id_prod %></td>
+                                <td><%= product.name %></td>
+                                <td><%= product.name %></td>
+                                <td><%= product.description %></td>
+                                <td><%= product.price %></td>
+                                <td><%= product.category %></td>
+                                <td><img src="../web/img/product/<%= product.photo %>" width="40%"></td>
+                                <td><a href="editProduct/<%= product.id %>" class="btn btn-primary">Editar</a> 
+                                <td><a href="/deleteLogicalProduct/<%= product.id %>" class="btn btn-warning">Borrado Lógico</a></td>
+                                <td><a href="/deletePhysicalProduct/<%= product.id %>" class="btn btn-danger">Borrado Físico</a></td>
+                            </tr>
+                        <% 
+                            }) 
+                        %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+    <%- include('templates/footer')%>

@@ -1,10 +1,11 @@
 var sequelize = require('sequelize');
 var userModel = require('./models/user');
+var productModel = require('./models/product');
                                 //DB, User, Pass, obj
-var connection = new sequelize('marketplace', 'root', 'root', {
+var connection = new sequelize('tanukitchen', 'root', 'root', {
     host: 'localhost',
     dialect: 'mysql',
-    port: '3306'
+    port: '8889'
 })
 
 connection.sync({force:false})
@@ -16,7 +17,9 @@ connection.sync({force:false})
     });
 
 var user = userModel(connection);
+var product = productModel(connection);
 
 module.exports = {
-    user
+    user,
+    product
 };
