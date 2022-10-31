@@ -45,9 +45,9 @@
                                     <%= user.type %>
                                 </td>
                                 <td><img src="../web/img/user/<%= user.photo %>" width="40%"></td>
-                                <td><a href="/editUser/<%= user.id %>" class="btn btn-primary">Editar Usuario</a>
-                                <td><a href="/deleteLogicalUser/<%= user.id %>" class="btn btn-warning">Borrado Lógico</a></td>
-                                <td><a href="/deletePhysicalUser/<%= user.id %>" class="btn btn-danger">Borrado Físico</a></td>
+                                <td><a href="/editUser/<%= user.id_usr %>" class="btn btn-primary">Editar Usuario</a>
+                                <td><a href="/deleteLogicalUser/<%= user.id_usr %>" class="btn btn-warning">Borrado Lógico</a></td>
+                                <td><a href="/deletePhysicalUser/<%= user.id_usr %>" class="btn btn-danger">Borrado Físico</a></td>
                                 </td>
                             </tr>
                             <% }) %>

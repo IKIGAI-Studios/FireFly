@@ -19,7 +19,7 @@ var uploadPhoto = (type) => {
           name = req.body.usr + "-" + file.originalname;
           break;
         case "product":
-          name = req.body.id_usr + "-" + file.originalname;
+          name = file.originalname;
           break;
       }
       cb(null, name);

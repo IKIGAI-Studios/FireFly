@@ -20,10 +20,10 @@ module.exports = (conexion) => {
             type: sequelize.STRING
         },
         photo: {
-            type: sequelize.BOOLEAN
+            type: sequelize.STRING
         },
         active: {
-            type: sequelize.STRING
+            type: sequelize.BOOLEAN
         }
     });
     return productSchema;

@@ -27,12 +27,12 @@
                                 <td><%= product.name %></td>
                                 <td><%= product.name %></td>
                                 <td><%= product.description %></td>
-                                <td><%= product.price %></td>
+                                <td>$<%= product.price %></td>
                                 <td><%= product.category %></td>
                                 <td><img src="../web/img/product/<%= product.photo %>" width="40%"></td>
-                                <td><a href="editProduct/<%= product.id %>" class="btn btn-primary">Editar</a> 
-                                <td><a href="/deleteLogicalProduct/<%= product.id %>" class="btn btn-warning">Borrado Lógico</a></td>
-                                <td><a href="/deletePhysicalProduct/<%= product.id %>" class="btn btn-danger">Borrado Físico</a></td>
+                                <td><a href="editProduct/<%= product.id_prod %>" class="btn btn-primary">Editar</a> 
+                                <td><a href="/deleteLogicalProduct/<%= product.id_prod %>" class="btn btn-warning">Borrado Lógico</a></td>
+                                <td><a href="/deletePhysicalProduct/<%= product.id_prod %>" class="btn btn-danger">Borrado Físico</a></td>
                             </tr>
                         <% 
                             }) 

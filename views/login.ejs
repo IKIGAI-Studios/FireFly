@@ -1,0 +1,20 @@
+<%- include('templates/header')%>
+    <section class="pt-2 pb-2">
+        <div class="container pt-5 pb-5">
+            <div class="row justify-content-center header-h100 align-items-center">
+                <div class="col-12 col-md-4 text-center">
+                    <form class="form-signin" action="/loginValidate" method="Post">
+                        <img class="ml-md-3 mr-3 mr-md-0 order-1 img-fluid rounded  mb-4"
+                            src="../web/img/src/tanukitchen_vertical.png" width="30%">
+                        <h1 class="h3 mb-3 fw-normal">Log In</h1>
+                        <label class="sr-only">User</label>
+                        <input type="text" name="user" class="form-control mt-3" placeholder="User" required autofocus> <br>
+                        <label class="sr-only">Password</label>
+                        <input type="password" name="password" class="form-control mt-3" placeholder="Password" required> <br>
+                        <button class="btn btn-lg btn-primary w-100" type="submit">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%- include('templates/footer')%>

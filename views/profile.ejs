@@ -1,0 +1,32 @@
+<%- include('templates/header')%>
+    <section class="pt-5 pb-5">
+        <div class="container">
+            <div class="row justify-content-center d-flex flex-wrap">
+                <div class="col-md-4 text-center">
+                    <img class="img-fluid mt-5 mb-0 img-center d-xs-none" src="../web/img/user/<%= usr.photo %>">
+                </div>
+                <div class="col-md-5   text-lg-start  mt-5 mb-5 pl-md-4  align-content-center flex-wrap d-flex">
+                    <h1 class="  text-dark mt-4">
+                        <%= usr.usr %>
+                    </h1>
+                    <p class="lead text-dark">
+                    <ul class="list-features mt-4 lead list-xl mb-5">
+                        <li>ID: <%= usr.id_usr %>
+                        </li>
+                        <li>Nombre: <%= usr.name %>
+                        </li>
+                        <li>Email: <%= usr.email %>
+                        </li>
+                        <li>Type: <%= usr.type %>
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        <a href="/editUser/<%= usr.id_usr %>" class="btn btn-lg btn-primary pill-btn btn-round mb-2 me-2 ms-0">Editar</a>
+                        <a href="/deleteUser/<%= usr.id_usr %>" class="btn btn-lg btn-danger pill-btn btn-round mb-2 me-2 ms-0">Borrar</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<%- include('templates/footer')%>

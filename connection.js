@@ -5,7 +5,7 @@ var productModel = require('./models/product');
 var connection = new sequelize('tanukitchen', 'root', 'root', {
     host: 'localhost',
     dialect: 'mysql',
-    port: '8889'
+    port: '3306'
 })
 
 connection.sync({force:false})

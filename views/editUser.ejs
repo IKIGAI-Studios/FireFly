@@ -1,0 +1,97 @@
+<%- include('templates/header')%>
+<section class="pt-5 pb-5">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-8 col-sm-12 order-sm-2">
+        <div class="container bg-light card shadow h-100">
+          <h2 class="card-title fw-bold mb-4 mt-1">Update User</h2>
+          <form action="/updateUser" method="Post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label>ID</label>
+              <input
+                name="id_usr"
+                class="form-control mt-2"
+                type="number"
+                readonly
+                value="<%= usrM.id_usr %>"
+              />
+            </div>
+            <div class="form-group">
+              <label>User</label>
+              <input
+                name="usr"
+                class="form-control mt-2"
+                placeholder="User"
+                type="text"
+                value="<%= usrM.usr %>"
+              />
+            </div>
+            <div class="form-group mt-2">
+              <label>Name</label>
+              <input
+                name="name"
+                class="form-control mt-2"
+                placeholder="Name"
+                type="text"
+                value="<%= usrM.name %>"
+              />
+            </div>
+            <div class="form-group mt-2">
+              <label>Email</label>
+              <input
+                name="email"
+                class="form-control mt-2"
+                placeholder="Email"
+                type="email"
+                value="<%= usrM.email %>"
+              />
+            </div>
+            <div class="form-group mt-2">
+              <label>Password</label>
+              <input
+                id="pass1"
+                class="form-control"
+                placeholder="Password"
+                type="Password"
+              />
+            </div>
+            <div class="form-group mt-2">
+              <label>Repeat password</label>
+              <input
+                name="password"
+                id="pass2"
+                class="form-control mt-2"
+                placeholder="Repeat password"
+                type="password"
+                onchange=" 
+                //Verificar que las contraseñas coincidan
+                if(document.getElementById('pass1').value != document.getElementById('pass2').value) {
+                  alert('Las contraseñas no coinciden');
+                  document.getElementById('pass2').value = '';
+                }" 
+              />
+            </div>
+            <div class="form-group mt-2">
+              <label>Upload Photo</label>
+              <input
+                class="form-control mt-2"
+                type="file"
+                name="photo"
+                id="photo"
+              />
+            </div> <br>
+            <div class="form-group mt-3">
+              <button type="submit" class="btn btn-primary w-100">
+                Modificar Usuario
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 order-sm-1">
+        <img src="../web/img/user/<%= usrM.photo %>" class="img-fluid rounded shadow-lg d-md-block d-lg-block d-none">
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('templates/footer')%>
