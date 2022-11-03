@@ -1,6 +1,6 @@
-var route = require('express').Router();
-var {user, product} = require('../connection');
-var {uploadPhoto} = require('../middlewares/uploadPhoto');
+const route = require('express').Router();
+const {user, product} = require('../connection');
+const {uploadPhoto} = require('../middlewares/uploadPhoto');
 
 // VIEWS
 
