@@ -1,7 +1,7 @@
 let sequelize = require('sequelize');
 
-module.exports = (conexion) => {
-    var userSchema = conexion.define('user', {
+module.exports = (connection) => {
+    var userSchema = connection.define('user', {
         id_usr: {
             type: sequelize.INTEGER, 
             primaryKey: true,
