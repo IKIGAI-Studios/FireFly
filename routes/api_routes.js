@@ -8,12 +8,12 @@ route.get('/showUsers', (req, res) => {
             active: true
         }
     })
-    .then((users) => {
-        res.json(users);
-    })
-    .catch((e) => {
-        res.json(`Error ${e}`);
-    });
+        .then((users) => {
+            res.json(users);
+        })
+        .catch((e) => {
+            res.json(`Error ${e}`);
+        });
 });
 
 route.get('/showProducts', (req, res) => {
@@ -22,12 +22,12 @@ route.get('/showProducts', (req, res) => {
             active: true
         }
     })
-    .then((products) => {
-        res.render(products);
-    })
-    .catch((e) => {
-        res.json(`Error ${e}`);
-    });
+        .then((products) => {
+            res.render(products);
+        })
+        .catch((e) => {
+            res.json(`Error ${e}`);
+        });
 });
 
 // Inserts
@@ -178,7 +178,7 @@ route.get('/deleteLogicalProduct/:id_prod', (req, res) => {
         }
     })
         .then(() => {
-            res.json('Usuario eliminado');
+            res.json('Producto eliminado');
         })
         .catch((e) => {
             res.json(`Error al eliminar el producto: ${e}`);
