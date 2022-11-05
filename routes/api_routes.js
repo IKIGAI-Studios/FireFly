@@ -1,5 +1,5 @@
 const route = require('express').Router();
-const {user} = require('../connection');
+const {user, product} = require('../connection');
 const {uploadPhoto} = require('../middlewares/uploadPhoto');
 
 route.get('/showUsers', (req, res) => {
@@ -23,7 +23,7 @@ route.get('/showProducts', (req, res) => {
         }
     })
         .then((products) => {
-            res.render(products);
+            res.json(products);
         })
         .catch((e) => {
             res.json(`Error ${e}`);
@@ -142,7 +142,7 @@ route.get('/deletePhysicalProduct/:id', (req,res) => {
         }
     })
         .then(() => {
-            res.json('Usuario eliminado');
+            res.json('Producto eliminado');
         })
         .catch((e) => {
             res.json(`Error ${e}`)
@@ -163,7 +163,7 @@ route.get('/deleteLogicalUser/:id_usr', (req, res) => {
             res.json('Usuario eliminado');
         })
         .catch((e) => {
-            res.json(`Error al eliminar el producto: ${e}`);
+            res.json(`Error al eliminar el Usuario: ${e}`);
         })
 });
 
@@ -181,7 +181,7 @@ route.get('/deleteLogicalProduct/:id_prod', (req, res) => {
             res.json('Producto eliminado');
         })
         .catch((e) => {
-            res.json(`Error al eliminar el producto: ${e}`);
+            res.json(`Error al eliminar el Producto: ${e}`);
         })
 });
 
