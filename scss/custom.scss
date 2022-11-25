@@ -1,8 +1,30 @@
 // Custom.scss
-
-@import "../node_modules/bootstrap/scss/bootstrap";
-
-// additional custom code here
-
 $body-bg: #393E46;
 $body-color: #D9D9D9;
+$primary: #6D9886;
+
+
+// additional custom code here
+$tk-darkblue: #393E46;
+$tk-green: #6D9886;
+$tk-beige: #F2E7D5;
+
+$tanukitchen-colors:(
+    "tk-darkblue": $tk-darkblue,
+    "tk-green": $tk-green,
+    "tk-beige": $tk-beige
+);
+
+
+@font-face {
+    font-family: 'lexend-deca';
+    src: url(../web/fonts/lexend-deca/LexendDeca-Regular.ttf) format('truetype');
+}
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+nav .tknavbar{
+    background-color: $tk-darkblue;
+    font-family: 'lexend-deca';
+}
