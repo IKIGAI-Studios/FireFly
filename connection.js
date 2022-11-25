@@ -2,7 +2,7 @@ var sequelize = require('sequelize');
 var userModel = require('./models/user');
 var productModel = require('./models/product');
                                 //DB, User, Pass, obj
-var connection = new sequelize('tanukitchen', 'root', 'root', {
+var connection = new sequelize('tanukitchen', 'root', '', {
     host: 'localhost',
     dialect: 'mysql',
     port: '3306'

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/IKIGAI-Studios/FireFly#readme",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "connect-session-sequelize": "^7.1.5",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
